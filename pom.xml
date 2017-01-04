@@ -22,7 +22,15 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-  <build>
+<profiles>
+  <profile>
+    <id>Mi Id</id>
+    <activation>
+      <os>
+        <family>linux</family>
+      </os>
+    </activation>
+    <build> 
         <plugins>
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
@@ -30,19 +38,15 @@
                 <version>6.1.10</version>
             </plugin>
             <plugin>
-              <groupId>org.apache.maven.plugins</groupId>
-
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-
                 <version>3.3</version>
-
                 <configuration>
-
                   <verbose>true</verbose>
-
                 </configuration>
-          </plugin>
+            </plugin>
         </plugins>
     </build>
-
+    </profile>
+    </profiles>
 </project>
