@@ -1,4 +1,4 @@
-;package PruebaApp;
+package PruebaApp;
 
 /**
  * Hello world!
